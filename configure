@@ -1,0 +1,22 @@
+#!/bin/sh
+
+USERNAME="$(whoami)"
+HOME="$HOME"
+
+printf "AS ADMINISTRATOR USER\n\n"
+
+printf "Install homebrew\n"
+printf "/bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"\n\n"
+
+printf "Install libusb via brew\n"
+printf "brew install libusb\n\n"
+
+printf "Install python3.14 via brew\n"
+printf "brew install python@3.14\n\n"
+
+printf "Add the following line to Sudoers:\n\n"
+
+printf "%s ALL=(ALL) NOPASSWD: %s/Scripts/venv/bin/python3.14 %s/Scripts/venv/bin/blinkstick --set-color \\#4040ff\n\n" "$USERNAME" "$HOME" "$HOME"
+
+printf "Run \"make install\" to install LaunchAgent and lightblue.sh\n\n"
+
