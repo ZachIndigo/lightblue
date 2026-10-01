@@ -1,7 +1,7 @@
 LAUNCHAGENTDIR := ~/Library/LaunchAgents
 PLIST := tv.newhopechurch.blinkstick.plist
 
-all:
+all: venv
 	./configure
 
 install: install-sudoers install-plist
@@ -17,4 +17,4 @@ venv:
 	~/Scripts/venv/bin/pip install blinkstick
 	~/Scripts/venv/bin/pip install pyusb
 
-.PHONY: install install-plist
+.PHONY: install install-plist venv
