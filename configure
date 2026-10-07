@@ -11,6 +11,10 @@ printf "/bin/bash -c \"\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/
 printf "Install libusb via brew\n"
 printf "brew install libusb\n\n"
 
+printf "Copy libusb files to /usr/local/lib"
+printf "sudo mkdir -p /usr/local/lib"
+printf "cp /opt/homebrew/lib/libusb* /usr/local/lib/."
+
 printf "Install python3.14 via brew\n"
 printf "brew install python@3.14\n\n"
 
